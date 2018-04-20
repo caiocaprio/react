@@ -1,0 +1,101 @@
+.box-accessibility {
+    ul {
+        padding: 15px 0 3px;
+        list-style: none;
+        display: table;
+        margin: 0;
+        @media (max-width: $screen-sm-max) {
+            padding: 15px 0 10px;
+        }
+        li {
+            display: table-cell;
+            vertical-align: middle;
+            a {
+                padding: 0;
+                @include rem('margin-right', 40px);
+                @include cf;
+                display: block;
+                position: relative;
+                color: #4d4d4d;
+                // font-family: $font-niisans-light;
+                font-weight: 300;
+                height: auto;
+                text-transform: uppercase;
+                cursor: pointer;
+                text-decoration: none;
+                @include rem('font-size', 15px);
+                @include transition(color .2s cubic-bezier($ease-in-out));
+                &:hover,
+                &:focus {
+                    color: #ff6f00;
+                    text-decoration: none;
+                }
+                @media (max-width: $screen-sm-max) {
+                    @include rem('font-size', 14px);
+                    @include rem('margin-right', 30px);
+                }
+                @media (max-width:$screen-xs-max) {
+                    @include rem('padding-top', 2px);
+                    @include rem('font-size', 11px);
+                    @include rem('margin-right', 18px);
+                }
+            }
+            &.aumentar-fonte {
+                a {
+                    @include rem('margin-right', 20px);
+                }
+            }
+            &.aumentar-fonte,
+            &.diminuir-fonte {
+                a {
+                    @include rem('font-size', 22px);
+                    // font-family: $font-niisans-bold;
+                    font-weight: 600;
+                    @media (max-width: $screen-sm-max) {
+                        @include rem('font-size', 18px);
+                    }
+                }
+            }
+            &.alto-contraste {
+                a {
+                    position: relative;
+                    display: block;
+                    padding-left: $ico-high-contrast-black-width + 7;
+                    @include cf;
+                    @include transition(color .2s cubic-bezier($ease-in-out));
+                    &:before {
+                        position: absolute;
+                        top: 1px;
+                        left: 0;
+                        @include transition(color .2s cubic-bezier($ease-in-out));
+                        @include __use-sprite($ico-high-contrast-black, 1);
+                    }
+                    &:after {
+                        position: absolute;
+                        top: 1px;
+                        left: 0;
+                        @include transition(color .2s cubic-bezier($ease-in-out));
+                        @include opacity(0);
+                        @include __use-sprite($ico-high-contrast, 1);
+                    }
+                    &:hover,
+                    &:focus {
+                        &:before {
+                            @include opacity(0);
+                        }
+                        &:after {
+                            @include opacity(1);
+                        }
+                    }
+                }
+            }
+            &.link-acessibilidade {
+                a {
+                    @media(max-width: $screen-sm-max) {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

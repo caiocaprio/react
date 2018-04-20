@@ -1,0 +1,61 @@
+// FIXME: only necessary because there isn't an underscored file - see https://github.com/twbs/bootstrap/issues/18350
+//@import "../third-party/material-kit/assets/scss/bower_components/bootstrap/scss/
+//@import "../../third-party/material-kit/assets/scss/bootstrap/scss/
+// Core variables and mixins
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/functions";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/variables";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/mixins";
+// #853 start - https://github.com/twbs/bootstrap/pull/18976/files
+// hack
+@mixin pull-left {
+    float: left !important;
+    @if $enable-flex {
+        margin-right: auto;
+    }
+}
+
+@mixin pull-right {
+    float: right !important;
+    @if $enable-flex {
+        margin-left: auto;
+    }
+}
+
+// #853 end - https://github.com/twbs/bootstrap/pull/18976/files
+// Reset and dependencies
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/reboot";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/print";
+// Core CSS
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/reboot";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/type";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/images";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/code";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/grid";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/tables";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/forms";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/buttons";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/transitions";
+// Components
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/dropdown";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/button-group";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/input-group";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/custom-forms";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/nav";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/navbar";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/card";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/breadcrumb";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/pagination";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/jumbotron";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/alert";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/progress";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/media";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/list-group";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/close";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/badge";
+// Components w/ JavaScript
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/modal";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/tooltip";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/popover";
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/carousel";
+// Utility classes
+@import "../third-party/material-kit/assets/scss/bootstrap/scss/utilities";

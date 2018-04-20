@@ -1,0 +1,100 @@
+$i: !important;
+// /* Colors
+// -------------------------------------------------------------------- /
+
+/* - Primary*/
+
+$color-black: #000000;
+$color-orange: #f47d31;
+$color-dark-blue: #002d62;
+$color-blue: #98bfd7;
+$color-graphite: #2e2e2e;
+$color-gray: #ededed;
+$color-white: #ffffff;
+$color-green: #297504;
+$color-dust: #bca263;
+// /* Fonts
+// -------------------------------------------------------------------- /
+$font-default: 'Roboto',
+Arial,
+Helvetica,
+sans-serif;
+$font-niisans-bold: NIISansBold,
+Arial,
+Helvetica,
+sans-serif;
+$font-niisans-light: NIISansLight,
+Arial,
+Helvetica,
+sans-serif;
+$font-niisans-regular: NIISansRegular,
+Arial,
+Helvetica,
+sans-serif;
+$font-primary: $font-default;
+$font-secondary: $font-default;
+$font-size-default: 16px;
+$font-color-default: rgba(74, 74, 74, 1);
+// /* VARIABLES DEFAULT BOOTSTRAP
+// -------------------------------------------------------------------- /
+$screen-mb-xs: 320px !default;
+$screen-xss: 480px !default;
+$screen-mb-xs-min: $screen-mb-xs !default;
+$screen-phone: $screen-mb-xs-min !default;
+$screen-320:320px;
+$screen-340:340px;
+$screen-480:480px;
+$screen-640:640px;
+$screen-xs: 0px !default;
+$screen-xs-min: $screen-xs !default;
+$screen-phone: $screen-xs-min !default;
+// Small screen / mobile
+$screen-sm: 576px !default;
+$screen-sm-min: $screen-sm !default;
+$screen-tablet: $screen-sm-min !default;
+// Small screen / tablet
+$screen-md: 768px !default;
+$screen-md-min: $screen-md !default;
+$screen-desktop: $screen-md-min !default;
+// Medium screen / desktop
+$screen-lg: 992px !default;
+$screen-lg-min: $screen-lg !default;
+$screen-lg-desktop: $screen-lg-min !default;
+// Large screen / wide desktop
+$screen-xl: 1200px !default;
+$screen-xl-min: $screen-xl !default;
+$screen-xl-desktop: $screen-xl-min !default;
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max: $screen-sm-min - 1 !default; //575px
+$screen-sm-max: $screen-md-min - 1 !default; //767px
+$screen-md-max: $screen-lg-min - 1 !default; //991px
+$screen-lg-max: $screen-xl-min - 1 !default; //1199px
+// xs: 0,
+// sm: 576px,
+// md: 768px,
+// lg: 992px,
+// xl: 1200px
+$color-out-link-menu-header:rgba(4, 14, 40, 1);
+$color-over-link-menu-header:#ff6f00;
+$color-out-link-sub-menu-header:rgba(100, 109, 130, 1);
+$color-over-link-sub-menu-header:rgba(4, 14, 40, 1);
+$color-out-lbl-navbar-toogle:rgba(0, 0, 0, 0.54);
+$color-over-lbl-navbar-toogle:rgba(4, 14, 40, 1);
+$bg-color-out-navbar-toogler-icon:rgba(100, 109, 130, 1);
+$bg-color-box-toolbar:rgba(241, 241, 241, 1);
+$color-out-link-toolbar:rgba(0, 0, 0, 0.54);
+$color-over-link-toolbar:rgba(4, 14, 40, 1);
+$color-active-link-toolbar:rgba(4, 14, 40, 1);
+$bg-color-box-menu-mobile:#fff;
+$border-color-division-box-menu-mobile:rgba(0, 0, 0, 0.12);
+$color-out-link-box-menu-mobile:rgba(4, 14, 40, 1);
+$color-over-link-box-menu-mobile:#e05307;
+$bg-color-box-toolbar-content:#fff;
+$color-link-breadcrumb:#666;
+$color-area-title:#666;
+$border-out-color-drop-uf-toolbar:rgba(100, 109, 130, 0.2);
+$border-over-color-drop-uf-toolbar:rgba(100, 109, 130, 0.2);
+$border-active-color-drop-uf-toolbar:rgba(100, 109, 130, 0.2);
+$bg-out-color-drop-uf-toolbar:rgba(255, 255, 255, 1);
+$bg-over-color-drop-uf-toolbar:rgba(255, 255, 255, 1);
+$bg-active-color-drop-uf-toolbar:rgba(255, 255, 255, 1);

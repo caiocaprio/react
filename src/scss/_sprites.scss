@@ -1,0 +1,475 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$arrow-select-down-name: 'arrow-select-down';
+$arrow-select-down-x: 335px;
+$arrow-select-down-y: 376px;
+$arrow-select-down-offset-x: -335px;
+$arrow-select-down-offset-y: -376px;
+$arrow-select-down-width: 15px;
+$arrow-select-down-height: 15px;
+$arrow-select-down-total-width: 570px;
+$arrow-select-down-total-height: 455px;
+$arrow-select-down-image: '/assets/dist/img/sprites.png';
+$arrow-select-down: (335px, 376px, -335px, -376px, 15px, 15px, 570px, 455px, '/assets/dist/img/sprites.png', 'arrow-select-down', );
+$arrow-select-up-name: 'arrow-select-up';
+$arrow-select-up-x: 300px;
+$arrow-select-up-y: 376px;
+$arrow-select-up-offset-x: -300px;
+$arrow-select-up-offset-y: -376px;
+$arrow-select-up-width: 15px;
+$arrow-select-up-height: 15px;
+$arrow-select-up-total-width: 570px;
+$arrow-select-up-total-height: 455px;
+$arrow-select-up-image: '/assets/dist/img/sprites.png';
+$arrow-select-up: (300px, 376px, -300px, -376px, 15px, 15px, 570px, 455px, '/assets/dist/img/sprites.png', 'arrow-select-up', );
+$bg-arrow-menu-mobile-name: 'bg-arrow-menu-mobile';
+$bg-arrow-menu-mobile-x: 438px;
+$bg-arrow-menu-mobile-y: 376px;
+$bg-arrow-menu-mobile-offset-x: -438px;
+$bg-arrow-menu-mobile-offset-y: -376px;
+$bg-arrow-menu-mobile-width: 15px;
+$bg-arrow-menu-mobile-height: 10px;
+$bg-arrow-menu-mobile-total-width: 570px;
+$bg-arrow-menu-mobile-total-height: 455px;
+$bg-arrow-menu-mobile-image: '/assets/dist/img/sprites.png';
+$bg-arrow-menu-mobile: (438px, 376px, -438px, -376px, 15px, 10px, 570px, 455px, '/assets/dist/img/sprites.png', 'bg-arrow-menu-mobile', );
+$bg-bt-quero-name: 'bg_bt_quero';
+$bg-bt-quero-x: 300px;
+$bg-bt-quero-y: 142px;
+$bg-bt-quero-offset-x: -300px;
+$bg-bt-quero-offset-y: -142px;
+$bg-bt-quero-width: 158px;
+$bg-bt-quero-height: 36px;
+$bg-bt-quero-total-width: 570px;
+$bg-bt-quero-total-height: 455px;
+$bg-bt-quero-image: '/assets/dist/img/sprites.png';
+$bg-bt-quero: (300px, 142px, -300px, -142px, 158px, 36px, 570px, 455px, '/assets/dist/img/sprites.png', 'bg_bt_quero', );
+$bt-buscar-name: 'bt_buscar';
+$bt-buscar-x: 370px;
+$bt-buscar-y: 376px;
+$bt-buscar-offset-x: -370px;
+$bt-buscar-offset-y: -376px;
+$bt-buscar-width: 14px;
+$bt-buscar-height: 14px;
+$bt-buscar-total-width: 570px;
+$bt-buscar-total-height: 455px;
+$bt-buscar-image: '/assets/dist/img/sprites.png';
+$bt-buscar: (370px, 376px, -370px, -376px, 14px, 14px, 570px, 455px, '/assets/dist/img/sprites.png', 'bt_buscar', );
+$bt-combo-ok-name: 'bt_combo_ok';
+$bt-combo-ok-x: 520px;
+$bt-combo-ok-y: 282px;
+$bt-combo-ok-offset-x: -520px;
+$bt-combo-ok-offset-y: -282px;
+$bt-combo-ok-width: 27px;
+$bt-combo-ok-height: 18px;
+$bt-combo-ok-total-width: 570px;
+$bt-combo-ok-total-height: 455px;
+$bt-combo-ok-image: '/assets/dist/img/sprites.png';
+$bt-combo-ok: (520px, 282px, -520px, -282px, 27px, 18px, 570px, 455px, '/assets/dist/img/sprites.png', 'bt_combo_ok', );
+$bt-flutuante-name: 'bt_flutuante';
+$bt-flutuante-x: 499px;
+$bt-flutuante-y: 132px;
+$bt-flutuante-offset-x: -499px;
+$bt-flutuante-offset-y: -132px;
+$bt-flutuante-width: 50px;
+$bt-flutuante-height: 50px;
+$bt-flutuante-total-width: 570px;
+$bt-flutuante-total-height: 455px;
+$bt-flutuante-image: '/assets/dist/img/sprites.png';
+$bt-flutuante: (499px, 132px, -499px, -132px, 50px, 50px, 570px, 455px, '/assets/dist/img/sprites.png', 'bt_flutuante', );
+$conector-loja-de-servicos-name: 'conector-loja-de-servicos';
+$conector-loja-de-servicos-x: 300px;
+$conector-loja-de-servicos-y: 273px;
+$conector-loja-de-servicos-offset-x: -300px;
+$conector-loja-de-servicos-offset-y: -273px;
+$conector-loja-de-servicos-width: 21px;
+$conector-loja-de-servicos-height: 18px;
+$conector-loja-de-servicos-total-width: 570px;
+$conector-loja-de-servicos-total-height: 455px;
+$conector-loja-de-servicos-image: '/assets/dist/img/sprites.png';
+$conector-loja-de-servicos: (300px, 273px, -300px, -273px, 21px, 18px, 570px, 455px, '/assets/dist/img/sprites.png', 'conector-loja-de-servicos', );
+$connectors-bt-click-call-mobile-name: 'connectors_bt_click_call_mobile';
+$connectors-bt-click-call-mobile-x: 0px;
+$connectors-bt-click-call-mobile-y: 430px;
+$connectors-bt-click-call-mobile-offset-x: 0px;
+$connectors-bt-click-call-mobile-offset-y: -430px;
+$connectors-bt-click-call-mobile-width: 217px;
+$connectors-bt-click-call-mobile-height: 25px;
+$connectors-bt-click-call-mobile-total-width: 570px;
+$connectors-bt-click-call-mobile-total-height: 455px;
+$connectors-bt-click-call-mobile-image: '/assets/dist/img/sprites.png';
+$connectors-bt-click-call-mobile: (0px, 430px, 0px, -430px, 217px, 25px, 570px, 455px, '/assets/dist/img/sprites.png', 'connectors_bt_click_call_mobile', );
+$facebook-out-name: 'facebook-out';
+$facebook-out-x: 237px;
+$facebook-out-y: 430px;
+$facebook-out-offset-x: -237px;
+$facebook-out-offset-y: -430px;
+$facebook-out-width: 10px;
+$facebook-out-height: 18px;
+$facebook-out-total-width: 570px;
+$facebook-out-total-height: 455px;
+$facebook-out-image: '/assets/dist/img/sprites.png';
+$facebook-out: (237px, 430px, -237px, -430px, 10px, 18px, 570px, 455px, '/assets/dist/img/sprites.png', 'facebook-out', );
+$facebook-over-name: 'facebook-over';
+$facebook-over-x: 267px;
+$facebook-over-y: 430px;
+$facebook-over-offset-x: -267px;
+$facebook-over-offset-y: -430px;
+$facebook-over-width: 10px;
+$facebook-over-height: 18px;
+$facebook-over-total-width: 570px;
+$facebook-over-total-height: 455px;
+$facebook-over-image: '/assets/dist/img/sprites.png';
+$facebook-over: (267px, 430px, -267px, -430px, 10px, 18px, 570px, 455px, '/assets/dist/img/sprites.png', 'facebook-over', );
+$google-plus-out-name: 'google-plus-out';
+$google-plus-out-x: 520px;
+$google-plus-out-y: 320px;
+$google-plus-out-offset-x: -520px;
+$google-plus-out-offset-y: -320px;
+$google-plus-out-width: 26px;
+$google-plus-out-height: 17px;
+$google-plus-out-total-width: 570px;
+$google-plus-out-total-height: 455px;
+$google-plus-out-image: '/assets/dist/img/sprites.png';
+$google-plus-out: (520px, 320px, -520px, -320px, 26px, 17px, 570px, 455px, '/assets/dist/img/sprites.png', 'google-plus-out', );
+$google-plus-over-name: 'google-plus-over';
+$google-plus-over-x: 520px;
+$google-plus-over-y: 357px;
+$google-plus-over-offset-x: -520px;
+$google-plus-over-offset-y: -357px;
+$google-plus-over-width: 26px;
+$google-plus-over-height: 17px;
+$google-plus-over-total-width: 570px;
+$google-plus-over-total-height: 455px;
+$google-plus-over-image: '/assets/dist/img/sprites.png';
+$google-plus-over: (520px, 357px, -520px, -357px, 26px, 17px, 570px, 455px, '/assets/dist/img/sprites.png', 'google-plus-over', );
+$header-line-name: 'header_line';
+$header-line-x: 499px;
+$header-line-y: 202px;
+$header-line-offset-x: -499px;
+$header-line-offset-y: -202px;
+$header-line-width: 1px;
+$header-line-height: 180px;
+$header-line-total-width: 570px;
+$header-line-total-height: 455px;
+$header-line-image: '/assets/dist/img/sprites.png';
+$header-line: (499px, 202px, -499px, -202px, 1px, 180px, 570px, 455px, '/assets/dist/img/sprites.png', 'header_line', );
+$header-menu-bullet-separador-name: 'header_menu_bullet_separador';
+$header-menu-bullet-separador-x: 565px;
+$header-menu-bullet-separador-y: 202px;
+$header-menu-bullet-separador-offset-x: -565px;
+$header-menu-bullet-separador-offset-y: -202px;
+$header-menu-bullet-separador-width: 4px;
+$header-menu-bullet-separador-height: 4px;
+$header-menu-bullet-separador-total-width: 570px;
+$header-menu-bullet-separador-total-height: 455px;
+$header-menu-bullet-separador-image: '/assets/dist/img/sprites.png';
+$header-menu-bullet-separador: (565px, 202px, -565px, -202px, 4px, 4px, 570px, 455px, '/assets/dist/img/sprites.png', 'header_menu_bullet_separador', );
+$header-separador-portais-name: 'header_separador_portais';
+$header-separador-portais-x: 569px;
+$header-separador-portais-y: 132px;
+$header-separador-portais-offset-x: -569px;
+$header-separador-portais-offset-y: -132px;
+$header-separador-portais-width: 1px;
+$header-separador-portais-height: 40px;
+$header-separador-portais-total-width: 570px;
+$header-separador-portais-total-height: 455px;
+$header-separador-portais-image: '/assets/dist/img/sprites.png';
+$header-separador-portais: (569px, 132px, -569px, -132px, 1px, 40px, 570px, 455px, '/assets/dist/img/sprites.png', 'header_separador_portais', );
+$ico-car-black-name: 'ico-car-black';
+$ico-car-black-x: 520px;
+$ico-car-black-y: 202px;
+$ico-car-black-offset-x: -520px;
+$ico-car-black-offset-y: -202px;
+$ico-car-black-width: 25px;
+$ico-car-black-height: 20px;
+$ico-car-black-total-width: 570px;
+$ico-car-black-total-height: 455px;
+$ico-car-black-image: '/assets/dist/img/sprites.png';
+$ico-car-black: (520px, 202px, -520px, -202px, 25px, 20px, 570px, 455px, '/assets/dist/img/sprites.png', 'ico-car-black', );
+$ico-car-name: 'ico-car';
+$ico-car-x: 520px;
+$ico-car-y: 242px;
+$ico-car-offset-x: -520px;
+$ico-car-offset-y: -242px;
+$ico-car-width: 25px;
+$ico-car-height: 20px;
+$ico-car-total-width: 570px;
+$ico-car-total-height: 455px;
+$ico-car-image: '/assets/dist/img/sprites.png';
+$ico-car: (520px, 242px, -520px, -242px, 25px, 20px, 570px, 455px, '/assets/dist/img/sprites.png', 'ico-car', );
+$ico-fechar-modal-name: 'ico-fechar-modal';
+$ico-fechar-modal-x: 337px;
+$ico-fechar-modal-y: 334px;
+$ico-fechar-modal-offset-x: -337px;
+$ico-fechar-modal-offset-y: -334px;
+$ico-fechar-modal-width: 16px;
+$ico-fechar-modal-height: 17px;
+$ico-fechar-modal-total-width: 570px;
+$ico-fechar-modal-total-height: 455px;
+$ico-fechar-modal-image: '/assets/dist/img/sprites.png';
+$ico-fechar-modal: (337px, 334px, -337px, -334px, 16px, 17px, 570px, 455px, '/assets/dist/img/sprites.png', 'ico-fechar-modal', );
+$ico-high-contrast-black-name: 'ico-high-contrast-black';
+$ico-high-contrast-black-x: 378px;
+$ico-high-contrast-black-y: 273px;
+$ico-high-contrast-black-offset-x: -378px;
+$ico-high-contrast-black-offset-y: -273px;
+$ico-high-contrast-black-width: 17px;
+$ico-high-contrast-black-height: 17px;
+$ico-high-contrast-black-total-width: 570px;
+$ico-high-contrast-black-total-height: 455px;
+$ico-high-contrast-black-image: '/assets/dist/img/sprites.png';
+$ico-high-contrast-black: (378px, 273px, -378px, -273px, 17px, 17px, 570px, 455px, '/assets/dist/img/sprites.png', 'ico-high-contrast-black', );
+$ico-high-contrast-name: 'ico-high-contrast';
+$ico-high-contrast-x: 341px;
+$ico-high-contrast-y: 273px;
+$ico-high-contrast-offset-x: -341px;
+$ico-high-contrast-offset-y: -273px;
+$ico-high-contrast-width: 17px;
+$ico-high-contrast-height: 17px;
+$ico-high-contrast-total-width: 570px;
+$ico-high-contrast-total-height: 455px;
+$ico-high-contrast-image: '/assets/dist/img/sprites.png';
+$ico-high-contrast: (341px, 273px, -341px, -273px, 17px, 17px, 570px, 455px, '/assets/dist/img/sprites.png', 'ico-high-contrast', );
+$logo-nextel-black-small-name: 'logo-nextel-black-small';
+$logo-nextel-black-small-x: 0px;
+$logo-nextel-black-small-y: 142px;
+$logo-nextel-black-small-offset-x: 0px;
+$logo-nextel-black-small-offset-y: -142px;
+$logo-nextel-black-small-width: 280px;
+$logo-nextel-black-small-height: 76px;
+$logo-nextel-black-small-total-width: 570px;
+$logo-nextel-black-small-total-height: 455px;
+$logo-nextel-black-small-image: '/assets/dist/img/sprites.png';
+$logo-nextel-black-small: (0px, 142px, 0px, -142px, 280px, 76px, 570px, 455px, '/assets/dist/img/sprites.png', 'logo-nextel-black-small', );
+$logo-nextel-orange-small-name: 'logo-nextel-orange-small';
+$logo-nextel-orange-small-x: 0px;
+$logo-nextel-orange-small-y: 334px;
+$logo-nextel-orange-small-offset-x: 0px;
+$logo-nextel-orange-small-offset-y: -334px;
+$logo-nextel-orange-small-width: 280px;
+$logo-nextel-orange-small-height: 76px;
+$logo-nextel-orange-small-total-width: 570px;
+$logo-nextel-orange-small-total-height: 455px;
+$logo-nextel-orange-small-image: '/assets/dist/img/sprites.png';
+$logo-nextel-orange-small: (0px, 334px, 0px, -334px, 280px, 76px, 570px, 455px, '/assets/dist/img/sprites.png', 'logo-nextel-orange-small', );
+$logo-nextel-white-small-name: 'logo-nextel-white-small';
+$logo-nextel-white-small-x: 0px;
+$logo-nextel-white-small-y: 238px;
+$logo-nextel-white-small-offset-x: 0px;
+$logo-nextel-white-small-offset-y: -238px;
+$logo-nextel-white-small-width: 280px;
+$logo-nextel-white-small-height: 76px;
+$logo-nextel-white-small-total-width: 570px;
+$logo-nextel-white-small-total-height: 455px;
+$logo-nextel-white-small-image: '/assets/dist/img/sprites.png';
+$logo-nextel-white-small: (0px, 238px, 0px, -238px, 280px, 76px, 570px, 455px, '/assets/dist/img/sprites.png', 'logo-nextel-white-small', );
+$lupa-buscar-name: 'lupa-buscar';
+$lupa-buscar-x: 404px;
+$lupa-buscar-y: 376px;
+$lupa-buscar-offset-x: -404px;
+$lupa-buscar-offset-y: -376px;
+$lupa-buscar-width: 14px;
+$lupa-buscar-height: 14px;
+$lupa-buscar-total-width: 570px;
+$lupa-buscar-total-height: 455px;
+$lupa-buscar-image: '/assets/dist/img/sprites.png';
+$lupa-buscar: (404px, 376px, -404px, -376px, 14px, 14px, 570px, 455px, '/assets/dist/img/sprites.png', 'lupa-buscar', );
+$mao-segurando-smartphone-name: 'mao_segurando_smartphone';
+$mao-segurando-smartphone-x: 499px;
+$mao-segurando-smartphone-y: 0px;
+$mao-segurando-smartphone-offset-x: -499px;
+$mao-segurando-smartphone-offset-y: 0px;
+$mao-segurando-smartphone-width: 71px;
+$mao-segurando-smartphone-height: 112px;
+$mao-segurando-smartphone-total-width: 570px;
+$mao-segurando-smartphone-total-height: 455px;
+$mao-segurando-smartphone-image: '/assets/dist/img/sprites.png';
+$mao-segurando-smartphone: (499px, 0px, -499px, 0px, 71px, 112px, 570px, 455px, '/assets/dist/img/sprites.png', 'mao_segurando_smartphone', );
+$nextel-white-name: 'nextel-white';
+$nextel-white-x: 0px;
+$nextel-white-y: 0px;
+$nextel-white-offset-x: 0px;
+$nextel-white-offset-y: 0px;
+$nextel-white-width: 479px;
+$nextel-white-height: 122px;
+$nextel-white-total-width: 570px;
+$nextel-white-total-height: 455px;
+$nextel-white-image: '/assets/dist/img/sprites.png';
+$nextel-white: (0px, 0px, 0px, 0px, 479px, 122px, 570px, 455px, '/assets/dist/img/sprites.png', 'nextel-white', );
+$pin-change-state-name: 'pin_change_state';
+$pin-change-state-x: 300px;
+$pin-change-state-y: 334px;
+$pin-change-state-offset-x: -300px;
+$pin-change-state-offset-y: -334px;
+$pin-change-state-width: 17px;
+$pin-change-state-height: 22px;
+$pin-change-state-total-width: 570px;
+$pin-change-state-total-height: 455px;
+$pin-change-state-image: '/assets/dist/img/sprites.png';
+$pin-change-state: (300px, 334px, -300px, -334px, 17px, 22px, 570px, 455px, '/assets/dist/img/sprites.png', 'pin_change_state', );
+$seta-laranja-baixo-name: 'seta-laranja-baixo';
+$seta-laranja-baixo-x: 449px;
+$seta-laranja-baixo-y: 334px;
+$seta-laranja-baixo-offset-x: -449px;
+$seta-laranja-baixo-offset-y: -334px;
+$seta-laranja-baixo-width: 18px;
+$seta-laranja-baixo-height: 9px;
+$seta-laranja-baixo-total-width: 570px;
+$seta-laranja-baixo-total-height: 455px;
+$seta-laranja-baixo-image: '/assets/dist/img/sprites.png';
+$seta-laranja-baixo: (449px, 334px, -449px, -334px, 18px, 9px, 570px, 455px, '/assets/dist/img/sprites.png', 'seta-laranja-baixo', );
+$seta-cinza-baixo-name: 'seta_cinza_baixo';
+$seta-cinza-baixo-x: 499px;
+$seta-cinza-baixo-y: 402px;
+$seta-cinza-baixo-offset-x: -499px;
+$seta-cinza-baixo-offset-y: -402px;
+$seta-cinza-baixo-width: 13px;
+$seta-cinza-baixo-height: 7px;
+$seta-cinza-baixo-total-width: 570px;
+$seta-cinza-baixo-total-height: 455px;
+$seta-cinza-baixo-image: '/assets/dist/img/sprites.png';
+$seta-cinza-baixo: (499px, 402px, -499px, -402px, 13px, 7px, 570px, 455px, '/assets/dist/img/sprites.png', 'seta_cinza_baixo', );
+$tag-name: 'tag';
+$tag-x: 300px;
+$tag-y: 198px;
+$tag-offset-x: -300px;
+$tag-offset-y: -198px;
+$tag-width: 168px;
+$tag-height: 20px;
+$tag-total-width: 570px;
+$tag-total-height: 455px;
+$tag-image: '/assets/dist/img/sprites.png';
+$tag: (300px, 198px, -300px, -198px, 168px, 20px, 570px, 455px, '/assets/dist/img/sprites.png', 'tag', );
+$twitter-out-name: 'twitter-out';
+$twitter-out-x: 415px;
+$twitter-out-y: 273px;
+$twitter-out-offset-x: -415px;
+$twitter-out-offset-y: -273px;
+$twitter-out-width: 19px;
+$twitter-out-height: 15px;
+$twitter-out-total-width: 570px;
+$twitter-out-total-height: 455px;
+$twitter-out-image: '/assets/dist/img/sprites.png';
+$twitter-out: (415px, 273px, -415px, -273px, 19px, 15px, 570px, 455px, '/assets/dist/img/sprites.png', 'twitter-out', );
+$twitter-over-name: 'twitter-over';
+$twitter-over-x: 454px;
+$twitter-over-y: 273px;
+$twitter-over-offset-x: -454px;
+$twitter-over-offset-y: -273px;
+$twitter-over-width: 19px;
+$twitter-over-height: 15px;
+$twitter-over-total-width: 570px;
+$twitter-over-total-height: 455px;
+$twitter-over-image: '/assets/dist/img/sprites.png';
+$twitter-over: (454px, 273px, -454px, -273px, 19px, 15px, 570px, 455px, '/assets/dist/img/sprites.png', 'twitter-over', );
+$txt-selecione-estado-name: 'txt_selecione_estado';
+$txt-selecione-estado-x: 300px;
+$txt-selecione-estado-y: 238px;
+$txt-selecione-estado-offset-x: -300px;
+$txt-selecione-estado-offset-y: -238px;
+$txt-selecione-estado-width: 156px;
+$txt-selecione-estado-height: 15px;
+$txt-selecione-estado-total-width: 570px;
+$txt-selecione-estado-total-height: 455px;
+$txt-selecione-estado-image: '/assets/dist/img/sprites.png';
+$txt-selecione-estado: (300px, 238px, -300px, -238px, 156px, 15px, 570px, 455px, '/assets/dist/img/sprites.png', 'txt_selecione_estado', );
+$youtube-out-name: 'youtube-out';
+$youtube-out-x: 373px;
+$youtube-out-y: 334px;
+$youtube-out-offset-x: -373px;
+$youtube-out-offset-y: -334px;
+$youtube-out-width: 18px;
+$youtube-out-height: 13px;
+$youtube-out-total-width: 570px;
+$youtube-out-total-height: 455px;
+$youtube-out-image: '/assets/dist/img/sprites.png';
+$youtube-out: (373px, 334px, -373px, -334px, 18px, 13px, 570px, 455px, '/assets/dist/img/sprites.png', 'youtube-out', );
+$youtube-over-name: 'youtube-over';
+$youtube-over-x: 411px;
+$youtube-over-y: 334px;
+$youtube-over-offset-x: -411px;
+$youtube-over-offset-y: -334px;
+$youtube-over-width: 18px;
+$youtube-over-height: 13px;
+$youtube-over-total-width: 570px;
+$youtube-over-total-height: 455px;
+$youtube-over-image: '/assets/dist/img/sprites.png';
+$youtube-over: (411px, 334px, -411px, -334px, 18px, 13px, 570px, 455px, '/assets/dist/img/sprites.png', 'youtube-over', );
+$spritesheet-width: 570px;
+$spritesheet-height: 455px;
+$spritesheet-image: '/assets/dist/img/sprites.png';
+$spritesheet-sprites: ($arrow-select-down, $arrow-select-up, $bg-arrow-menu-mobile, $bg-bt-quero, $bt-buscar, $bt-combo-ok, $bt-flutuante, $conector-loja-de-servicos, $connectors-bt-click-call-mobile, $facebook-out, $facebook-over, $google-plus-out, $google-plus-over, $header-line, $header-menu-bullet-separador, $header-separador-portais, $ico-car-black, $ico-car, $ico-fechar-modal, $ico-high-contrast-black, $ico-high-contrast, $logo-nextel-black-small, $logo-nextel-orange-small, $logo-nextel-white-small, $lupa-buscar, $mao-segurando-smartphone, $nextel-white, $pin-change-state, $seta-laranja-baixo, $seta-cinza-baixo, $tag, $twitter-out, $twitter-over, $txt-selecione-estado, $youtube-out, $youtube-over, );
+$spritesheet: (570px, 455px, '/assets/dist/img/sprites.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

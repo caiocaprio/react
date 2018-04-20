@@ -1,0 +1,18 @@
+$pathFonts: '/assets/dist/font';
+@font-face {
+    font-family: 'NIISansBold';
+    src: url($pathFonts+'/niisans/niisans-bold.eot');
+    src: url($pathFonts+'/niisans/niisans-bold.eot') format('embedded-opentype'), url($pathFonts+'/niisans/niisans-bold.woff') format('woff'), url($pathFonts+'/niisans/niisans-bold.ttf') format('truetype'), url($pathFonts+'/niisans/niisans-bold.svg#NIISansBold') format('svg');
+}
+
+@font-face {
+    font-family: 'NIISansRegular';
+    src: url($pathFonts+'/niisans/niisans-regular.eot');
+    src: url($pathFonts+'/niisans/niisans-regular.eot') format('embedded-opentype'), url($pathFonts+'/niisans/niisans-regular.woff') format('woff'), url($pathFonts+'/niisans/niisans-regular.ttf') format('truetype'), url($pathFonts+'/niisans/niisans-regular.svg#NIISansRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'NIISansLight';
+    src: url($pathFonts+'/niisans/niisans-light.eot');
+    src: url($pathFonts+'/niisans/niisans-light.eot') format('embedded-opentype'), url($pathFonts+'/niisans/niisans-light.woff') format('woff'), url($pathFonts+'/niisans/niisans-light.ttf') format('truetype'), url($pathFonts+'/niisans/niisans-light.svg#NIISansLight') format('svg');
+}

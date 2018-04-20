@@ -1,0 +1,452 @@
+.sr-only {
+    right: 0;
+    clip: initial;
+    margin-right: 45px;
+    text-align: right;
+    top: 0;
+    width: auto;
+    height: auto;
+    font-size: 14px;
+    // font-family: $font-niisans-light;
+    font-weight: 300;
+    color: #4d4d4d;
+    padding: 10px 0;
+}
+
+.navbar-default {
+    background-color: transparent;
+    .navbar-toggle {
+        margin-right: 0;
+        background-color: transparent;
+        border: 0;
+        border-radius: 0;
+        margin-top: 15px;
+        .icon-bar {
+            background-color: #4d4d4d;
+            width: 25px;
+            +.icon-bar {
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+.navbar-header {
+    @media screen and (min-width: $screen-sm-min) {
+        padding: 47px 0 35px;
+    }
+    @media (max-width:$screen-md-max) {
+        border-bottom: 1px solid #CCC;
+        padding: 0 0px;
+        margin: 0 5px;
+    }
+}
+
+.navbar {
+    @include border-radius(0);
+    background-color: #f4f4f4;
+    border: 0;
+    margin-bottom: 0px;
+    box-shadow: none;
+    padding: 0;
+    .navbar-toggler {
+        position: relative;
+        &:focus,
+        &:hover {
+            .lbl {
+                color: $color-over-link-menu-header;
+            }
+            .navbar-toggler-icon {
+                background-color: $color-over-link-menu-header;
+            }
+        }
+        .navbar-toggler-icon {
+            background-color: $bg-color-out-navbar-toogler-icon;
+        }
+        .lbl {
+            position: absolute;
+            right: 43px;
+            top: 3px;
+            margin: 0 0 0;
+            color: $color-out-lbl-navbar-toogle;
+            @include rem('font-size', 18px);
+        }
+    }
+    >.container {
+        flex: auto;
+    }
+    .navbar-nav {
+        .nav-item {
+            &:after {
+                @media (max-width: $screen-md-max) {
+                    display: none;
+                }
+            }
+            .nav-link {
+                color: $color-out-link-menu-header;
+                @include transition(color .2s cubic-bezier($ease-in-out));
+                margin: 0;
+                padding: 10px 15px;
+                display: block;
+                text-transform: none;
+                cursor: pointer;
+                &:hover,
+                &:focus,
+                &.active {
+                    color: $color-over-link-menu-header;
+                    background-color: transparent;
+                }
+                @media screen and (min-width: $screen-md-min) {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+                &.navbar-brand {
+                    text-indent: -999px;
+                    height: auto;
+                    padding: 0 0;
+                    margin: 10px 25px;
+                    @media screen and (min-width: $screen-md-min) {
+                        margin-left: 0;
+                    }
+                    @media screen and (min-width: $screen-sm-min) {
+                        padding: 0px 0;
+                    }
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .navbar-brand {
+        position: relative;
+        @include cf;
+        margin: 15px 0;
+        padding: 0;
+        height: auto;
+        &:before {
+            @include __use-sprite($logo-nextel-orange-small, .5);
+            // background-size: 100% auto;
+            // background-position: top 0;
+            @include transition(all .2s cubic-bezier($ease-in-out));
+            @media(max-width: $screen-md-max) {
+                @include __use-sprite($logo-nextel-orange-small, .5);
+            }
+        }
+        &:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            @include transition(all .2s cubic-bezier($ease-in-out));
+            @include opacity(0);
+            @include __use-sprite($logo-nextel-black-small, .5);
+            @media(max-width: $screen-md-max) {
+                @include __use-sprite($logo-nextel-black-small, .5);
+                margin: 0;
+            }
+        }
+        &:hover,
+        &:focus {
+            &:after {
+                @include opacity(1);
+            }
+            &:before {
+                @include opacity(0);
+            }
+        }
+        span {
+            display: none;
+        }
+    }
+}
+
+.navbar-nav {
+    .nav-item {
+        &.logo {
+            .nav-link {
+                &.navbar-brand {
+                    margin: 15px 30px 15px 0;
+                    padding: 0;
+                    @media (max-width: $screen-md-max) {
+                        margin: 0px 0 15px;
+                        padding: 10px 15px;
+                    }
+                    &:after {
+                        @media (max-width: $screen-md-max) {
+                            top: 10px;
+                            left: 15px;
+                        }
+                    }
+                    &:focus,
+                    &:hover {
+                        background-color: transparent;
+                        color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.links-top-left {
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                color: $color-out-link-menu-header;
+                // font-family: $font-niisans-regular;
+                // font-weight: 500;
+                @include rem('font-size', 20px);
+                @media (max-width: $screen-sm-max) {
+                    // @include rem('font-size', 26px);
+                    font-size: 20px;
+                }
+                &:focus,
+                &:hover,
+                &.active {
+                    color: $color-over-link-menu-header;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+.links-menu {
+    .navbar-nav {
+        float: none;
+        margin: 0 0px;
+        padding-top: 10px;
+        .nav-item {
+            .nav-link {
+                color: $color-out-link-sub-menu-header;
+                // font-family: $font-niisans-light;
+                font-weight: 400;
+                @include rem('font-size', 14px);
+                @media (max-width: $screen-xs-max) {
+                    font-size: 14px;
+                }
+                &:focus,
+                &:hover,
+                &.active {
+                    // font-weight: 500;
+                    color: $color-over-link-sub-menu-header;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    // .navbar-nav {
+    //     >li {
+    //         >a {
+    //             width: auto;
+    //             display: block;
+    //             padding: 5px 15px;
+    //             text-transform: inherit;
+    //             @media screen and (min-width: $screen-md-min) {
+    //                 padding-top: 7px;
+    //                 padding-bottom: 7px;
+    //                 display: inline;
+    //                 @include rem('padding-left', 15px);
+    //                 @include rem('padding-right', 15px);
+    //             }
+    //         }
+    //     }
+    // }
+}
+
+.group-menu {
+    width: 100%;
+    &.links-menu {
+        margin-top: 0px;
+        @media screen and (min-width: $screen-md-min) {
+            border-top: 1px solid #CCC;
+            margin-top: 0px;
+        }
+    }
+}
+
+.navbar-collapse {
+    border: 0;
+    padding-right: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    @media (max-width: $screen-sm-max) {
+        padding: 0 5px;
+    }
+    .scroll {
+        width: 100%;
+        @media (max-width: $screen-sm-max) {
+            overflow-y: scroll;
+            height: 100%;
+            padding-bottom: 15px;
+        }
+    }
+}
+
+.full-menu {
+    position: relative;
+    margin-top: 20px;
+    @media screen and (min-width: $screen-sm-min) {}
+}
+
+@keyframes moveArrow {
+    100%,
+    20%,
+    60% {
+        margin-bottom: 0
+    }
+    40%,
+    80% {
+        margin-bottom: 7px
+    }
+}
+
+.nav-full-menu {
+    @include cf;
+    &:before {
+        transform: rotate(180);
+    }
+    &:before,
+    &:after {
+        @include opacity(0);
+        @include transition(opacity 1s ease-in-out, transform .3s ease-in-out)
+    }
+    &.fixed {
+        @media (max-width: $screen-xs-max) {
+            position: fixed;
+            z-index: 999;
+            width: 100% $i;
+            left: 0;
+            z-index: 20;
+            overflow: scroll;
+            background-color: #f4f4f4;
+            padding: 0 15px;
+            &:before {
+                @include __use-sprite($bg-arrow-menu-mobile);
+                transform: rotate(0);
+                z-index: 1;
+                bottom: 27px;
+                right: 25px;
+                position: fixed;
+                @include opacity(1);
+                animation: moveArrow ease-in-out 1.5s 1 normal;
+            }
+            &:after {
+                content: "";
+                display: block;
+                position: fixed;
+                border-radius: 50%;
+                width: 35px;
+                height: 35px;
+                bottom: 15px;
+                right: 15px;
+                text-align: center;
+                z-index: 0;
+                background-color: black;
+                @include opacity(1);
+                animation: moveArrow ease-in-out 1.5s 1 normal;
+            }
+        }
+    }
+    &.search-opened {
+        .full-menu {
+            margin-top: 50px;
+        }
+    }
+}
+
+.box-menu-mobile {
+    background-color: $bg-color-box-menu-mobile;
+    .nav {
+        width: 100%;
+        padding: 12px 0;
+        text-align: center;
+        align-content: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-top: 1px solid $border-color-division-box-menu-mobile;
+        >li {
+            border-right: 1px solid #CCC;
+            display: inline-block;
+            margin-right: -3px;
+            &:last-child {
+                border-right: 0px solid #CCC;
+            }
+            >a {
+                color: $color-out-link-box-menu-mobile;
+                padding: 0 15px;
+                @include rem('font-size', 18px);
+                &:focus,
+                &:hover {
+                    color: $color-over-link-box-menu-mobile;
+                }
+            }
+        }
+    }
+}
+
+.navbar-toggle {
+    border: none;
+    background: transparent !important;
+    &:hover {
+        background: transparent !important;
+    }
+    .icon-bar {
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+}
+
+
+/* ANIMATED X */
+
+.navbar-toggle.x {
+    &.collapsed .icon-bar:nth-of-type(2) {
+        -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+        transform: rotate(0);
+    }
+    &.collapsed .icon-bar:nth-of-type(3) {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+    &.collapsed .icon-bar:nth-of-type(4) {
+        -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+        transform: rotate(0);
+    }
+    .icon-bar:nth-of-type(2) {
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-transform-origin: 10% 10%;
+        -ms-transform-origin: 10% 10%;
+        transform-origin: 10% 10%;
+    }
+    .icon-bar:nth-of-type(3) {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    .icon-bar:nth-of-type(4) {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: 10% 90%;
+        -ms-transform-origin: 10% 90%;
+        transform-origin: 10% 90%;
+    }
+}
+
+.nav {
+    >li {
+        >a {
+            &:hover,
+            &:focus {
+                background-color: transparent;
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+/*! =========================================================
+ *
+ * Material Kit PRO - v2.0.2 (Bootstrap 4.0.0 Final Edition)
+ *
+ * =========================================================
+ *
+ * Product Page: https://www.creative-tim.com/product/material-kit-pro
+ * Available with purchase of license from https://www.creative-tim.com/product/material-kit-pro
+ * Copyright 2018 Creative Tim (https://www.creative-tim.com)
+ * License Creative Tim (https://www.creative-tim.com/license)
+ *
+ * ========================================================= */
+
+@import "../third-party/material-kit/assets/scss/core/variables";
+@import "../third-party/material-kit/assets/scss/core/mixins";
+// Core Components
+@import "bootstrap";
+@import "../third-party/material-kit/assets/scss/core/reboot";
+@import "../third-party/material-kit/assets/scss/core/layout";
+@import "../third-party/material-kit/assets/scss/core/buttons";
+@import "../third-party/material-kit/assets/scss/core/misc";
+@import "../third-party/material-kit/assets/scss/core/checkboxes";
+@import "../third-party/material-kit/assets/scss/core/cards";
+@import "../third-party/material-kit/assets/scss/core/custom-forms";
+@import "../third-party/material-kit/assets/scss/core/switches";
+@import "../third-party/material-kit/assets/scss/core/radios";
+@import "../third-party/material-kit/assets/scss/core/carousel";
+@import "../third-party/material-kit/assets/scss/core/forms";
+@import "../third-party/material-kit/assets/scss/core/input-group";
+@import "../third-party/material-kit/assets/scss/core/list-group";
+@import "../third-party/material-kit/assets/scss/core/nav";
+@import "../third-party/material-kit/assets/scss/core/images";
+@import "../third-party/material-kit/assets/scss/core/navbar";
+@import "../third-party/material-kit/assets/scss/core/badges";
+@import "../third-party/material-kit/assets/scss/core/alerts";
+@import "../third-party/material-kit/assets/scss/core/pagination";
+@import "../third-party/material-kit/assets/scss/core/pills";
+@import "../third-party/material-kit/assets/scss/core/info-areas";
+@import "../third-party/material-kit/assets/scss/core/type";
+@import "../third-party/material-kit/assets/scss/core/tabs";
+@import "../third-party/material-kit/assets/scss/core/tooltip";
+@import "../third-party/material-kit/assets/scss/core/popover";
+@import "../third-party/material-kit/assets/scss/core/modal";
+@import "../third-party/material-kit/assets/scss/core/dropdown";
+@import "../third-party/material-kit/assets/scss/core/drawer";
+@import "../third-party/material-kit/assets/scss/core/progress";
+@import "../third-party/material-kit/assets/scss/core/togglebutton";
+// @import "../third-party/material-kit/assets/scss/core/ripples";
+// Components for PRO
+@import "../third-party/material-kit/assets/scss/pro/social-buttons";
+@import "../third-party/material-kit/assets/scss/pro/fileupload";
+@import "../third-party/material-kit/assets/scss/pro/tables";
+@import "../third-party/material-kit/assets/scss/pro/cards";
+@import "../third-party/material-kit/assets/scss/pro/sections";
+@import "../third-party/material-kit/assets/scss/pro/media";
+// Core Plugins
+@import "../third-party/material-kit/assets/scss/plugins/plugin-datetime-picker";
+@import "../third-party/material-kit/assets/scss/plugins/plugin-nouislider";
+//Plugins for PRO
+@import "../third-party/material-kit/assets/scss/plugins/plugin-bootstrap-select";
+@import "../third-party/material-kit/assets/scss/plugins/plugin-flexisel";
+@import "../third-party/material-kit/assets/scss/plugins/plugin-tagsinput";
+// Sections and Example pages for PRO
+@import "../third-party/material-kit/assets/scss/pro/example-pages";
+@import "../third-party/material-kit/assets/scss/pro/sections/headers";
+@import "../third-party/material-kit/assets/scss/pro/sections/footers";
+@import "../third-party/material-kit/assets/scss/pro/sections/social-subscribe-lines";
+@import "../third-party/material-kit/assets/scss/pro/sections/features";
+@import "../third-party/material-kit/assets/scss/pro/sections/team";
+@import "../third-party/material-kit/assets/scss/pro/sections/pricing";
+@import "../third-party/material-kit/assets/scss/pro/sections/blogs";
+@import "../third-party/material-kit/assets/scss/pro/sections/projects";
+@import "../third-party/material-kit/assets/scss/pro/sections/testimonials";
+@import "../third-party/material-kit/assets/scss/pro/sections/contactus";
+@import "../third-party/material-kit/assets/scss/core/responsive";
+.ripple-container {
+    display: none;
+}

@@ -1,0 +1,121 @@
+html {
+    &.high-contrast {
+        body {
+            background-color: #000 $i;
+            // color: #666 $i;
+        }
+        a {
+            color: #fff $i;
+            &:hover,
+            &:focus {
+                color: #fe9963 $i;
+            }
+        }
+        .box-area-title {
+            a,
+            h1 {
+                color: #fe9963 $i;
+            }
+        }
+        .box-menu .navbar,
+        .box-footer,
+        .box-menu-mobile {
+            background-color: #2C2C2C $i;
+        }
+        .box-footer .socials {
+            @media(max-width: $screen-xs-max) {
+                background-color: #2C2C2C $i;
+            }
+        }
+        .box-toolbar ul.portais li.portal-para-voce {
+            background-color: transparent $i;
+            color: #fff $i;
+        }
+        .box-menu .navbar-nav>li.bt-peca-nextel>a {
+            color: #FE9963 $i;
+            &:hover,
+            &:focus {
+                color: #fff $i;
+            }
+        }
+        .navbar-collapse {
+            background-color: #2C2C2C $i;
+            &:after {
+                @media (max-width: $screen-md-max) {
+                    background-color: #2C2C2C $i;
+                }
+            }
+        }
+        .box-toolbar {
+            background-color: #000;
+        }
+        .box-menu .sr-only {
+            color: #fff $i;
+        }
+        .box-menu .navbar-default .navbar-toggle .icon-bar {
+            background-color: #fff $i;
+        }
+        .box-menu .navbar .navbar-toggler .navbar-toggler-icon {
+            background-color: #fff;
+        }
+        .box-menu .navbar-toggler .lbl {
+            color: #fff;
+        }
+        .box-search.mobile .search-field {
+            background-color: #2C2C2C $i;
+            color: #fff $i;
+        }
+        .links-footer ul>li.tag-footer a {
+            &:before {}
+            &:after {
+                display: none;
+                @include __use-sprite($logo-nextel-white-small, .5);
+            }
+        }
+        /*FALE CONOSCO*/
+        .page-contact-us .feature-box-info h3 {
+            color: #FE9963 $i;
+        }
+        /*COMPONENT ACCESSIBITY*/
+        .box-accessibility {
+            background-color: #000 $i;
+            ul li.alto-contraste a {
+                color: #fe9963 $i;
+                &:before {
+                    display: none;
+                }
+                &:after {
+                    @include opacity(1);
+                }
+            }
+        }
+        .box-socials>span {
+            color: #fff $i;
+        }
+        .box-toolbar-content {
+            background-color: #000;
+        }
+        .drop-uf.show>.btn.btn-secondary.dropdown-toggle {
+            background-color: #2C2C2C $i;
+            color: #fff $i;
+            &:hover,
+            &:focus {
+                background-color: #2C2C2C $i;
+                color: #fff $i;
+            }
+        }
+        .drop-uf .btn.btn-secondary.dropdown-toggle {
+            background-color: #2C2C2C $i;
+            color: #fff $i;
+            &:hover,
+            &:focus {
+                background-color: #2C2C2C $i;
+                color: #fff $i;
+            }
+        }
+        .dropdown-menu {
+            color: #fff $i;
+            background-color: #2C2C2C $i;
+        }
+    }
+}

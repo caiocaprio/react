@@ -1,0 +1,108 @@
+.box-search {
+    &.mobile {
+        display: none;
+        position: relative;
+        background-color: #f4f4f4;
+        &.show {
+            display: block;
+        }
+        .search-field {
+            padding: 15px 5px 0;
+            position: absolute;
+            width: 100%;
+            z-index: 99;
+            background-color: #f4f4f4;
+            .bt-search {
+                top: 18px;
+                right: 12px;
+            }
+        }
+    }
+}
+
+.ico-mobile-buscar {
+    @include cf;
+    width: 20px;
+    height: 23px;
+    position: absolute;
+    right: 124px;
+    top: 20px;
+    border: 0;
+    border-right: 1px solid #666;
+    padding-right: 40px;
+    background-color: transparent;
+    &:focus,
+    &:hover {
+        outline: none;
+    }
+    &:before {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        border-top: 2px solid #676767;
+        border-left: 2px solid #676767;
+        border-right: 2px solid #676767;
+        border-bottom: 2px solid #676767;
+        border-radius: 50%;
+        transition: all .2s ease-in-out;
+        transform: rotate(0);
+        transform-origin: bottom right;
+        position: absolute;
+        bottom: 7px;
+        right: 26px;
+    }
+    &:after {
+        position: absolute;
+        height: 2px;
+        width: 8px;
+        background-color: #676767;
+        display: block;
+        content: "";
+        left: 4px;
+        bottom: 3px;
+        transform: rotate(-45deg);
+        transform-origin: bottom left;
+        transition: all .2s ease-in-out;
+    }
+}
+
+.search-field {
+    legend {
+        display: none;
+    }
+    label {
+        display: none;
+    }
+    input[type=text] {
+        width: 155px;
+        height: auto;
+        text-transform: uppercase;
+        color: #4d4d4d;
+        // font-family: $font-niisans-regular;
+        border: 0;
+        border-bottom: 1px solid #797979;
+        background: 0 0;
+        padding: 2px 25px 2px 0;
+        @include rem('font-size', 14px);
+        &:focus {
+            outline: none;
+        }
+        @media(max-width:$screen-xs-max) {
+            width: 100%;
+        }
+    }
+    .bt-search {
+        right: 7px;
+        border: 0;
+        cursor: pointer;
+        position: absolute;
+        top: 3px;
+        display: inline-block;
+        overflow: hidden;
+        text-indent: -9999px;
+        text-align: left;
+        @include __use-sprite($lupa-buscar);
+        background-color: transparent;
+    }
+}

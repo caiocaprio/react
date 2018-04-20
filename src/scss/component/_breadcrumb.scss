@@ -1,0 +1,45 @@
+.box-breadcrumb {
+    padding: 0px 0 0 15px;
+    margin-bottom: 0px;
+    list-style: none;
+    background-color: transparent;
+    border-radius: 4px;
+    text-align: right;
+    @media screen and (min-width: $screen-sm-min) {
+        text-align: right;
+    }
+    .breadcrumb {
+        margin: 0;
+        background-color: transparent;
+        border-radius: 4px;
+        justify-content: flex-end;
+        >li {
+            margin: 0 0 15px 0px;
+            color: $color-link-breadcrumb;
+            a {
+                color: inherit;
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            &+li {
+                @include cf;
+                &:before {
+                    content: "/ ";
+                    padding: 0 5px;
+                    color: $color-link-breadcrumb;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+.box-breadcrumb {
+    @media (min-width: $screen-sm-min) {
+        float: right;
+    }
+}

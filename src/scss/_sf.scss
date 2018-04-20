@@ -1,0 +1,39 @@
+.rdContent {
+    * {
+        position: relative !important;
+        left: initial !important;
+        right: initial !important;
+        bottom: initial !important;
+        top: initial !important;
+        margin-top: initial !important;
+        margin-bottom: initial !important;
+        padding: initial !important;
+        z-index: initial !important;
+    }
+    .sf_cols {
+        >div {
+            margin-left: initial;
+            margin-right: initial;
+            &.container {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+.sfPageEditor {
+    span,
+    p {
+        font-size: 12px;
+        @media screen and (min-width: $screen-sm-min) {
+            font-size: 12px;
+        }
+    }
+    .fade {
+        opacity: 1;
+    }
+    .modal-header {
+        display: block;
+    }
+}

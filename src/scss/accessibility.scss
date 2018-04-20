@@ -1,0 +1,24 @@
+$base_font_size: 12px;
+
+body {
+    &.highContrast {
+        background-color: black;
+        color: white;
+    }
+
+    &.fontSize_2 {
+        font-size: $base_font_size + 2px;
+    }
+
+    &.fontSize_1 {
+        font-size: $base_font_size + 1px;
+    }
+
+    &.fontSize_-1 {
+        font-size: $base_font_size - 1px;
+    }
+
+    &.fontSize_-2 {
+        font-size: $base_font_size - 2px;
+    }
+}

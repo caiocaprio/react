@@ -1,0 +1,214 @@
+@charset "UTF-8";
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak,
+.ng-hide:not(.ng-hide-animate) {
+    display: none !important;
+}
+
+ng\:form {
+    display: block;
+}
+
+.ng-animate-shim {
+    visibility: hidden;
+}
+
+.ng-anchor {
+    position: absolute;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+* {
+    @include selection {
+        color: #fff;
+        background: #f26522;
+    }
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-auto {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+html {
+    position: relative;
+    overflow-x: hidden;
+    &.nav-open {
+        @media (max-width: $screen-sm-max) {
+            overflow-y: hidden;
+        }
+    }
+    font-size: $font-size-default;
+    &.size--1 {
+        font-size: $font-size-default - 2;
+    }
+    &.size-1 {
+        font-size: $font-size-default + 2;
+    }
+    &.size-2 {
+        font-size: $font-size-default + 4;
+    }
+    &.size-3 {
+        font-size: $font-size-default + 6;
+    }
+}
+
+body {
+    font-family: $font-default;
+    font-size: $font-size-default;
+    color: $font-color-default;
+    font-weight: 300;
+    height: 100%;
+    line-height: 1.4;
+}
+
+a {
+    @include transition(color .2s cubic-bezier($ease-in-out));
+    text-decoration: none;
+    color: #666;
+    &:focus,
+    &:hover {
+        text-decoration: none;
+        color: #e05307;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: $font-default;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+h1,
+.h1 {
+    @include rem('font-size', 44px);
+    color: #796d65;
+}
+
+span,
+p {
+    @include rem('font-size', $font-size-default);
+}
+
+a,
+button {
+    transition: all 0.2s ease;
+}
+
+.center-block {
+    margin: 0 auto;
+    float: none;
+}
+
+input,
+select,
+textarea,
+button {
+    &:focus {
+        outline-color: #f26522;
+    }
+}
+
+.division {
+    display: block;
+    height: 1px;
+    background-color: #CCC;
+    margin: 40px 0;
+    @include cf;
+}
+
+header {
+    .container {
+        width: 100%;
+        @media (min-width: $screen-sm-min) {
+            // max-width: 1170px;
+            max-width: 1012px;
+        }
+        @media (min-width: $screen-md-min) {
+            max-width: 1012px;
+            width: 100%;
+        }
+    }
+}
+
+#container,
+footer {
+    .container {
+        width: 100%;
+        @media (min-width: $screen-sm-min) {
+            // max-width: 1170px;
+            max-width: 1012px;
+        }
+        @media (min-width: $screen-lg-min) {
+            max-width: 1012px;
+            // width: 90%;
+        }
+    }
+}
+
+.break-sm {
+    @media (min-width: $screen-sm-min) {
+        display: block;
+    }
+}
+
+.break-xs {
+    @media (max-width: $screen-xs-max) {
+        display: block;
+    }
+}
+
+.lbl-error {
+    margin-top: 5px;
+    color: #f52222;
+    display: table;
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        font-size: 12px;
+    }
+}
+
+.fluxo-finish {
+    margin: 40px 0;
+    width: auto;
+    max-width: 100%;
+}
+
+.box-tb {
+    display: table;
+    width: 100%;
+}
+
+.box-tb-c {
+    display: table-cell;
+    &.va-center {
+        vertical-align: center;
+    }
+    &.va-top {
+        vertical-align: top;
+    }
+    &.va-bottom {
+        vertical-align: bottom;
+    }
+}

@@ -1,0 +1,112 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$nextel-black-name: 'nextel-black';
+$nextel-black-x: 0px;
+$nextel-black-y: 0px;
+$nextel-black-offset-x: 0px;
+$nextel-black-offset-y: 0px;
+$nextel-black-width: 479px;
+$nextel-black-height: 122px;
+$nextel-black-total-width: 479px;
+$nextel-black-total-height: 406px;
+$nextel-black-image: '/assets/dist/img/logo-nextel.png';
+$nextel-black: (0px, 0px, 0px, 0px, 479px, 122px, 479px, 406px, '/assets/dist/img/logo-nextel.png', 'nextel-black', );
+$nextel-orange-name: 'nextel-orange';
+$nextel-orange-x: 0px;
+$nextel-orange-y: 142px;
+$nextel-orange-offset-x: 0px;
+$nextel-orange-offset-y: -142px;
+$nextel-orange-width: 479px;
+$nextel-orange-height: 122px;
+$nextel-orange-total-width: 479px;
+$nextel-orange-total-height: 406px;
+$nextel-orange-image: '/assets/dist/img/logo-nextel.png';
+$nextel-orange: (0px, 142px, 0px, -142px, 479px, 122px, 479px, 406px, '/assets/dist/img/logo-nextel.png', 'nextel-orange', );
+$nextel-white-name: 'nextel-white';
+$nextel-white-x: 0px;
+$nextel-white-y: 284px;
+$nextel-white-offset-x: 0px;
+$nextel-white-offset-y: -284px;
+$nextel-white-width: 479px;
+$nextel-white-height: 122px;
+$nextel-white-total-width: 479px;
+$nextel-white-total-height: 406px;
+$nextel-white-image: '/assets/dist/img/logo-nextel.png';
+$nextel-white: (0px, 284px, 0px, -284px, 479px, 122px, 479px, 406px, '/assets/dist/img/logo-nextel.png', 'nextel-white', );
+$spritesheet-width: 479px;
+$spritesheet-height: 406px;
+$spritesheet-image: '/assets/dist/img/logo-nextel.png';
+$spritesheet-sprites: ($nextel-black, $nextel-orange, $nextel-white, );
+$spritesheet: (479px, 406px, '/assets/dist/img/logo-nextel.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

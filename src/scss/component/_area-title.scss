@@ -1,0 +1,13 @@
+.box-area-title {
+    padding-top: 0;
+    padding-bottom: 25px;
+    @media screen and (min-width: $screen-sm-min) {
+        padding-top: 25px;
+    }
+    h1 {
+        margin: 0;
+        @include rem('font-size', 44px);
+        font-weight: 300;
+        color: $color-area-title;
+    }
+}
