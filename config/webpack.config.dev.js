@@ -8,22 +8,23 @@ const package = require('../package.json');
 
 const PATHS = {
     src: path.join(__dirname, '../src'),
-    dist: path.join(__dirname, '../dist')
+    dist: path.join(__dirname, '../dist'),
+    publicPath : '/'
 };
 
-const extractCSS = new ExtractTextPlugin('public/css/main.css');
+// const extractCSS = new ExtractTextPlugin('../src/public/css/main.css');
 
 module.exports = {
     context: __dirname,
     mode: 'development',
     entry: {
-        app: [PATHS.src + '/js'],
+        'public/js/app': [PATHS.src+'/js'],
         vendors: Object.keys(package.dependencies)
     },
     output: {
         path: PATHS.dist,
         filename: '[name].js',
-        publicPath: '/'
+        publicPath: PATHS.publicPath
     },
     optimization: {
         runtimeChunk: 'single',
@@ -64,9 +65,16 @@ module.exports = {
                     },
                     {
                         loader: 'sass-loader'
-                    }
+                    },
                 ]
             },
+            {
+                test: /\.css$/,
+                use: [
+                  { loader: "style-loader/url" },
+                  { loader: "file-loader" }
+                ]
+              },
             {
                 test: /.jsx?$/,
                 exclude: /node_modules/,
@@ -115,26 +123,27 @@ module.exports = {
                 html5: true
             },
             mobile: true,
-            scripts: ['public/js/all.min.js', 'public/js/main.js']
+            scripts: ['/public/js/all.min.js', '/public/js/main.js']
         }),
         // extractCSS,
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin(),
-        new CopyWebpackPlugin([{
-                from: path.join(PATHS.src, '/img/favicon.ico'),
-                to: path.join(PATHS.dist, '/img/favicon.ico')
+        new CopyWebpackPlugin([
+            {
+                from: path.join(PATHS.src , '/public/img'),
+                to: path.join(PATHS.dist , '/public/img')
             },
             {
-                from: path.join(PATHS.src, '/public/third-party'),
-                to: path.join(PATHS.dist, '/public/third-party')
+                from: path.join(PATHS.src ,'/public/third-party'),
+                to: path.join(PATHS.dist , '/public/third-party')
             },
             {
-                from: path.join(PATHS.src, '/public/js'),
-                to: path.join(PATHS.dist, '/public/js')
+                from: path.join(PATHS.src ,  '/public/js'),
+                to: path.join(PATHS.dist ,  '/public/js')
             },
             {
-                from: path.join(PATHS.src, '/public/css'),
-                to: path.join(PATHS.dist, '/public/css')
+                from: path.join(PATHS.src ,  '/public/css'),
+                to: path.join(PATHS.dist , '/public/css')
             }
         ]),
         // new ExtractTextWebpackPlugin('main.css'),

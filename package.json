@@ -1,7 +1,7 @@
 {
-    "name": "webpack-demo",
+    "name": "webpack-react-demo",
     "version": "1.0.0",
-    "description": "webpack 4 (legato) demo app",
+    "description": "WebPack + React",
     "main": "index.js",
     "scripts": {
         "default:dev": "npm run clean && webpack --mode development",
@@ -14,7 +14,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/carloluis/webpack-demo.git"
+        "url": "git+https://github.com/caiocaprio/react.git"
     },
     "keywords": [
         "webpack",
@@ -22,12 +22,11 @@
         "webpack 4 (legato)",
         "demo"
     ],
-    "author": "Carloluis Rodríguez <carloluisr@gmail.com> (https://github.com/carloluis)",
-    "license": "MIT",
+    "author": "Caio Caprio",
     "bugs": {
-        "url": "https://github.com/carloluis/webpack-demo/issues"
+        "url": ""
     },
-    "homepage": "https://github.com/carloluis/webpack-demo#readme",
+    "homepage": "",
     "devDependencies": {
         "babel-core": "^6.26.0",
         "babel-loader": "^7.1.4",
