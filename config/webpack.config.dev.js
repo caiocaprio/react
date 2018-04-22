@@ -12,7 +12,12 @@ const PATHS = {
     publicPath : '/'
 };
 
-// const extractCSS = new ExtractTextPlugin('../src/public/css/main.css');
+// const extractSass = new ExtractTextPlugin({
+//     filename: "[name].[contenthash].css"
+//     // disable: process.env.NODE_ENV === "development"
+// });
+
+const extractCSS = new ExtractTextPlugin('css/[name].css');
 
 module.exports = {
     context: __dirname,
@@ -47,27 +52,52 @@ module.exports = {
     },
     devtool: 'eval',
     module: {
-        rules: [{
-                test: /.(scss)$/,
-                use: [{
-                        loader: 'style-loader'
-                    },
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            modules: true,
-                            camelCase: 'dashes',
-                            localIdentName: '[path][name]__[local]'
+        rules: [
+            // {
+            //     test: /.(scss)$/,
+            //     use: [{
+            //             loader: 'style-loader'
+            //         },
+            //         {
+            //             loader: 'css-loader',
+            //             options: {
+            //                 modules: true,
+            //                 camelCase: 'dashes',
+            //                 localIdentName: '[path][name]__[local]'
+            //             }
+            //         },
+            //         {
+            //             loader: 'resolve-url-loader'
+            //         },
+            //         {
+            //             loader: 'sass-loader'
+            //         },
+            //     ]
+            // },
+   
+            {
+                test: /\.scss$/,
+                use: ExtractTextPlugin.extract({
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                // If you are having trouble with urls not resolving add this setting.
+                                // See https://github.com/webpack-contrib/css-loader#url
+                                url: false,
+                                minimize: true,
+                                sourceMap: true
+                            }
+                        }, 
+                        {
+                            loader: 'sass-loader',
+                            options: {
+                                sourceMap: true
+                            }
                         }
-                    },
-                    {
-                        loader: 'resolve-url-loader'
-                    },
-                    {
-                        loader: 'sass-loader'
-                    },
-                ]
-            },
+                      ]
+                })
+              },
             {
                 test: /\.css$/,
                 use: [
@@ -108,6 +138,8 @@ module.exports = {
         //     mobile: true,
         //     scripts: ['public/js/all.min.js', 'public/js/main.js']
         // }),
+        // extractCSS,
+        new ExtractTextPlugin("css/main.css"),
         new HtmlWebpackPlugin({
             template: '../node_modules/html-webpack-template/index.ejs',
             title: 'Nextel',
@@ -124,8 +156,7 @@ module.exports = {
             },
             mobile: true,
             scripts: ['/public/js/all.min.js', '/public/js/main.js']
-        }),
-        // extractCSS,
+        }),        
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin(),
         new CopyWebpackPlugin([
@@ -146,7 +177,7 @@ module.exports = {
                 to: path.join(PATHS.dist , '/public/css')
             }
         ]),
-        // new ExtractTextWebpackPlugin('main.css'),
+        
         // new StyleExtHtmlWebpackPlugin({
         //     position: 'head-bottom'
         // }),

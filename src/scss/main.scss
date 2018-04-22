@@ -4,13 +4,13 @@
 /* THIRD-PARTY  */
 
 //FANCYBOX
-// @import "../../third-party/fancybox/scss/jquery.fancybox";
+// @import "../third-party/fancybox/scss/jquery.fancybox";
 //COMPASS MIXINS
-// @import "../../third-party/compass-mixins/compass";
+@import "../third-party/compass-mixins/compass";
 // //BOOTSTRAP
 // @import "../third-party/bootstrap/bootstrap";
 //MATERIAL UI KIT
-// @import "material";
+@import "material";
 
 /* COMMON */
 

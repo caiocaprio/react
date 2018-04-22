@@ -9,6 +9,8 @@ export default class Contentful extends React.Component {
         this.state = { planos: [] }
     }
 
+    
+
     componentDidMount() {
         const client = createClient({
             // This is the space ID. A space is like a project folder in Contentful terms
@@ -35,18 +37,27 @@ export default class Contentful extends React.Component {
             console.log(response.items)
         })
         .catch((err) => console.log(err))
+
     }
 
     render() {
+        const ulStyle = {
+            marginTop:'20px'
+        }
+
         const planos = this.state.planos.map((plano, index)=> {
 
             const nomePlno = plano.fields.namePlan;
+
+           
+            
             const liStyle = {
-                textAlign:'left'
+                textAlign:'left',
+                marginBottom:'20px'
             }
 
             return (
-                <li style={liStyle}>
+                <li style={liStyle} key={index}>
                     <ul>
                         <li>Plano: {plano.fields.namePlan}</li>
                         <li>Franquia: {plano.fields.franchisePlan}</li>
@@ -54,7 +65,6 @@ export default class Contentful extends React.Component {
                         <li>Bonus: {plano.fields.bonusPlan}</li>
                         {/* <li>foto:<img src={plano.fields.photoPlan.fields.file.url}/></li> */}
                     </ul>
-
                 </li>
             )
 
@@ -62,7 +72,8 @@ export default class Contentful extends React.Component {
         })
 
         return (
-            <ul>
+            
+            <ul style={ulStyle}>
                 {planos}
             </ul>
         )
