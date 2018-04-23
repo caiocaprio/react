@@ -9,7 +9,8 @@ const package = require('../package.json');
 const PATHS = {
     src: path.join(__dirname, '../src'),
     dist: path.join(__dirname, '../dist'),
-    publicPath : '/'
+    publicPath: '/',
+    assetsPath: '/public'
 };
 
 // const extractSass = new ExtractTextPlugin({
@@ -17,14 +18,14 @@ const PATHS = {
 //     // disable: process.env.NODE_ENV === "development"
 // });
 
-const extractCSS = new ExtractTextPlugin('css/[name].css');
+// const extractCSS = new ExtractTextPlugin('css/[name].css');
 
 module.exports = {
     context: __dirname,
     mode: 'development',
     entry: {
-        'public/js/app': [PATHS.src+'/js'],
-        vendors: Object.keys(package.dependencies)
+        'public/js/app': [PATHS.src + '/js'],
+        // 'public/js/vendors': Object.keys(package.dependencies)
     },
     output: {
         path: PATHS.dist,
@@ -32,17 +33,19 @@ module.exports = {
         publicPath: PATHS.publicPath
     },
     optimization: {
-        runtimeChunk: 'single',
-        splitChunks: {
+        // runtimeChunk: 'single',
+        runtimeChunk: false,
+        splitChunks: false,
+        /*splitChunks: {
             cacheGroups: {
                 vendors: {
                     test: /[\\/]node_modules[\\/]/,
-                    name: 'vendors',
+                    name: '/public/js/vendors',
                     enforce: true,
                     chunks: 'all'
                 }
             }
-        }
+        }*/
     },
     resolve: {
         extensions: ['.js', '.jsx', '.jsm'],
@@ -74,12 +77,10 @@ module.exports = {
             //         },
             //     ]
             // },
-   
             {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
-                    use: [
-                        {
+                    use: [{
                             loader: 'css-loader',
                             options: {
                                 // If you are having trouble with urls not resolving add this setting.
@@ -88,27 +89,28 @@ module.exports = {
                                 minimize: true,
                                 sourceMap: true
                             }
-                        }, 
+                        },
                         {
                             loader: 'sass-loader',
                             options: {
                                 sourceMap: true
                             }
                         }
-                      ]
+                    ]
                 })
-              },
+            },
             {
                 test: /\.css$/,
                 use: [
-                  { loader: "style-loader/url" },
-                  { loader: "file-loader" }
+                    { loader: "style-loader/url" },
+                    { loader: "file-loader" }
                 ]
-              },
+            },
             {
                 test: /.jsx?$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader'
+                loader: 'babel-loader',
+
             },
             {
                 test: /\.(jpg|png)$/,
@@ -116,7 +118,7 @@ module.exports = {
             }
             // {
             //     test: /\.css$/,
-            //     use: extractCSS.extract(['css-loader', 'sass-loader', 'resolve-url-loader'])
+            // use: extractCSS.extract(['css-loader', 'sass-loader', 'resolve-url-loader'])
             // },
         ]
     },
@@ -155,29 +157,28 @@ module.exports = {
                 html5: true
             },
             mobile: true,
-            scripts: ['/public/js/all.min.js', '/public/js/main.js']
-        }),        
+            scripts: [PATHS.assetsPath + '/js/all.min.js', PATHS.assetsPath + '/js/main.js']
+        }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin(),
-        new CopyWebpackPlugin([
-            {
-                from: path.join(PATHS.src , '/public/img'),
-                to: path.join(PATHS.dist , '/public/img')
+        new CopyWebpackPlugin([{
+                from: path.join(PATHS.src, PATHS.assetsPath, '/img'),
+                to: path.join(PATHS.dist, PATHS.assetsPath, '/img')
             },
             {
-                from: path.join(PATHS.src ,'/public/third-party'),
-                to: path.join(PATHS.dist , '/public/third-party')
+                from: path.join(PATHS.src, PATHS.assetsPath, '/third-party'),
+                to: path.join(PATHS.dist, PATHS.assetsPath, '/third-party')
             },
             {
-                from: path.join(PATHS.src ,  '/public/js'),
-                to: path.join(PATHS.dist ,  '/public/js')
+                from: path.join(PATHS.src, PATHS.assetsPath, '/js'),
+                to: path.join(PATHS.dist, PATHS.assetsPath, '/js')
             },
             {
-                from: path.join(PATHS.src ,  '/public/css'),
-                to: path.join(PATHS.dist , '/public/css')
+                from: path.join(PATHS.src, PATHS.assetsPath, '/css'),
+                to: path.join(PATHS.dist, PATHS.assetsPath, '/css')
             }
         ]),
-        
+
         // new StyleExtHtmlWebpackPlugin({
         //     position: 'head-bottom'
         // }),

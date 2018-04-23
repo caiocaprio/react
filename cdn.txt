@@ -1,0 +1,3 @@
+//https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.6.0/prop-types.min.js,
+//https://unpkg.com/react@16.2.0/umd/react.production.min.js
+//https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.2.0/cjs/react-dom-server.browser.production.min.js

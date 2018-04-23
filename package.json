@@ -1,63 +1,63 @@
 {
-  "name": "webpack-react-demo",
-  "version": "1.0.0",
-  "description": "WebPack + React",
-  "main": "index.js",
-  "scripts": {
-    "default:dev": "npm run clean && webpack --mode development",
-    "default:prod": "npm run clean && webpack --mode production",
-    "build:dev": "npm run clean && webpack --mode development",
-    "build": "npm run clean && BABEL_ENV=production webpack --mode production",
-    "stats": "webpack --profile --json > stats.json",
-    "dev": "webpack-dev-server",
-    "clean": "rimraf dist"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/caiocaprio/react.git"
-  },
-  "keywords": [
-    "webpack",
-    "webpack-4",
-    "webpack 4 (legato)",
-    "demo"
-  ],
-  "author": "Caio Caprio",
-  "bugs": {
-    "url": ""
-  },
-  "homepage": "",
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-plugin-transform-react-remove-prop-types": "^0.4.13",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "babelify-es6-polyfill": "^1.0.4",
-    "contentful": "^6.0.0",
-    "copy-webpack-plugin": "^4.4.1",
-    "css-loader": "^0.28.10",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "file-loader": "^1.1.11",
-    "html-webpack-plugin": "^3.2.0",
-    "html-webpack-template": "^6.1.0",
-    "mini-css-extract-plugin": "^0.4.0",
-    "node-sass": "^4.8.3",
-    "raw-loader": "^0.5.1",
-    "resolve-url-loader": "^2.3.0",
-    "rimraf": "^2.6.2",
-    "sass-loader": "^7.0.1",
-    "style-ext-html-webpack-plugin": "^3.4.7",
-    "style-loader": "^0.20.2",
-    "webpack": "^4.6.0",
-    "webpack-cli": "^2.0.13",
-    "webpack-dev-server": "^3.1.3",
-    "webpack-livereload-plugin": "^2.1.1"
-  },
-  "dependencies": {
-    "prop-types": "^15.6.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "reformat-number": "1.0.0"
-  }
+    "name": "webpack-react-demo",
+    "version": "1.0.0",
+    "description": "WebPack + React",
+    "main": "index.js",
+    "scripts": {
+        "default:dev": "npm run clean && webpack --mode development",
+        "default:prod": "npm run clean && webpack --mode production",
+        "build:dev": "npm run clean && webpack --mode development",
+        "build": "npm run clean && webpack --mode production",
+        "stats": "webpack --profile --json > stats.json",
+        "dev": "webpack-dev-server",
+        "clean": "rimraf dist"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/caiocaprio/react.git"
+    },
+    "keywords": [
+        "webpack",
+        "webpack-4",
+        "webpack 4 (legato)",
+        "demo"
+    ],
+    "author": "Caio Caprio",
+    "bugs": {
+        "url": ""
+    },
+    "homepage": "",
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.4",
+        "babel-plugin-transform-react-remove-prop-types": "^0.4.13",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-react": "^6.24.1",
+        "babelify-es6-polyfill": "^1.0.4",
+        "contentful": "^6.0.0",
+        "copy-webpack-plugin": "^4.4.1",
+        "css-loader": "^0.28.10",
+        "extract-text-webpack-plugin": "^4.0.0-beta.0",
+        "file-loader": "^1.1.11",
+        "html-webpack-plugin": "^3.2.0",
+        "html-webpack-template": "^6.1.0",
+        "mini-css-extract-plugin": "^0.4.0",
+        "node-sass": "^4.8.3",
+        "raw-loader": "^0.5.1",
+        "resolve-url-loader": "^2.3.0",
+        "rimraf": "^2.6.2",
+        "sass-loader": "^7.0.1",
+        "style-ext-html-webpack-plugin": "^3.4.7",
+        "style-loader": "^0.20.2",
+        "webpack": "^4.6.0",
+        "webpack-cli": "^2.0.13",
+        "webpack-dev-server": "^3.1.3",
+        "webpack-livereload-plugin": "^2.1.1"
+    },
+    "dependencies": {
+        "prop-types": "^15.6.1",
+        "react": "^16.2.0",
+        "react-dom": "^16.2.0",
+        "reformat-number": "1.0.0"
+    }
 }

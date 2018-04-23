@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const webpack = require('webpack');
 const path = require('path');
 
@@ -8,60 +9,72 @@ const package = require('../package.json');
 
 const PATHS = {
     src: path.join(__dirname, '../src'),
-    dist: path.join(__dirname, '../dist')
+    dist: path.join(__dirname, '../dist'),
+    publicPath: './',
+    assetsPath: './public'
 };
 
 module.exports = {
     context: __dirname,
     mode: 'production',
     entry: {
-        app: [PATHS.src],
-        vendors: Object.keys(package.dependencies)
+        'public/js/app': [PATHS.src + '/js'],
+        // 'public/js/vendors': Object.keys(package.dependencies)
     },
     output: {
         path: PATHS.dist,
         filename: '[name].[chunkhash].js',
-        publicPath: './'
+        publicPath: PATHS.publicPath
     },
     optimization: {
-        runtimeChunk: 'single',
-        splitChunks: {
-            cacheGroups: {
-                vendors: {
-                    test: /[\\/]node_modules[\\/]/,
-                    name: 'vendors',
-                    enforce: true,
-                    chunks: 'all'
-                }
-            }
-        }
+        runtimeChunk: false,
+        splitChunks: false,
+        // runtimeChunk: 'single',
+        // splitChunks: {
+        //     cacheGroups: {
+        //         vendors: {
+        //             test: /[\\/]node_modules[\\/]/,
+        //             name: 'public/js/vendors',
+        //             enforce: true,
+        //             chunks: 'all'
+        //         }
+        //     }
+        // }
     },
     resolve: {
         extensions: ['.js', '.jsx', '.jsm'],
         alias: {
-            styles: path.resolve(__dirname, '../src/styles')
+            styles: path.resolve(__dirname, '../src/scss')
         }
     },
     module: {
-        rules: [
-            {
-                test: /.scss$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            modules: true,
-                            camelCase: 'dashes',
-                            minimize: true
+        rules: [{
+                test: /\.scss$/,
+                use: ExtractTextPlugin.extract({
+                    use: [{
+                            loader: 'css-loader',
+                            options: {
+                                // If you are having trouble with urls not resolving add this setting.
+                                // See https://github.com/webpack-contrib/css-loader#url
+                                url: false,
+                                minimize: true,
+                                sourceMap: true
+                            }
+                        },
+                        {
+                            loader: 'sass-loader',
+                            options: {
+                                sourceMap: true
+                            }
                         }
-                    },
-                    {
-                        loader: 'resolve-url-loader'
-                    },
-                    {
-                        loader: 'sass-loader'
-                    }
+                    ]
+                })
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    { loader: "style-loader/url" },
+                    { loader: "file-loader" }
                 ]
             },
             {
@@ -76,10 +89,11 @@ module.exports = {
         ]
     },
     plugins: [
+        new ExtractTextPlugin(path.join(PATHS.assetsPath, '/css/main.css')),
         new HtmlWebpackPlugin({
             template: '../node_modules/html-webpack-template/index.ejs',
-            title: 'Webpack 4 Demo',
-            favicon: '../src/favicon.ico',
+            title: 'Nextel',
+            favicon: '../src/img/favicon.ico',
             meta: [{ name: 'robots', content: 'noindex,nofollow' }],
             appMountIds: ['app'],
             inject: false,
@@ -91,21 +105,24 @@ module.exports = {
                 html5: true
             },
             mobile: true,
-            scripts: ['./static.js']
+            scripts: [PATHS.assetsPath + 'js/all.min.js', PATHS.assetsPath + 'js/main.js']
         }),
-        new CopyWebpackPlugin([
-            {
-                from: path.join(PATHS.src, 'favicon.ico'),
-                to: path.join(PATHS.dist, 'favicon.ico')
+        new CopyWebpackPlugin([{
+                from: path.join(PATHS.src, PATHS.assetsPath, '/img'),
+                to: path.join(PATHS.dist, PATHS.assetsPath, '/img')
             },
             {
-                from: path.join(PATHS.src, 'demo/static.js'),
-                to: path.join(PATHS.dist, 'static.js')
+                from: path.join(PATHS.src, PATHS.assetsPath, '/third-party'),
+                to: path.join(PATHS.dist, PATHS.assetsPath, '/third-party')
+            },
+            {
+                from: path.join(PATHS.src, PATHS.assetsPath, '/js'),
+                to: path.join(PATHS.dist, PATHS.assetsPath, '/js')
             }
         ]),
-        new MiniCssExtractPlugin({
-            filename: '[name].[chunkhash].css'
-        }),
+        // new MiniCssExtractPlugin({
+        //     filename: '[name].[chunkhash].css'
+        // }),
         new webpack.DefinePlugin({
             PRODUCTION: JSON.stringify(true)
         })
