@@ -1,8 +1,10 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin')
 const webpack = require('webpack');
 const path = require('path');
+
 
 const package = require('../package.json');
 
@@ -25,7 +27,24 @@ module.exports = {
     mode: 'development',
     entry: {
         'public/js/app': [PATHS.src + '/js'],
-        // 'public/js/vendors': Object.keys(package.dependencies)
+        'public/js/all': [
+            PATHS.src + '/public/third-party/material-kit/assets/js/core/jquery.min.js',
+            PATHS.src + '/public/third-party/material-kit/assets/js/core/popper.min.js',
+            PATHS.src + '/public/third-party/material-kit/assets/js/bootstrap-material-design.js',
+            PATHS.src + '/public/third-party/material-kit/assets/js/plugins/moment.min.js',
+            PATHS.src + '/public/third-party/material-kit/assets/js/plugins/bootstrap-datetimepicker.min.js',
+            PATHS.src + '/public/third-party/material-kit/assets/js/plugins/nouislider.min.js',
+            PATHS.src + '/public/third-party/material-kit/assets/js/plugins/bootstrap-selectpicker.js',
+            PATHS.src + '/public/third-party/material-kit/assets/js/plugins/bootstrap-tagsinput.js',
+            PATHS.src + '/public/third-party/material-kit/assets/js/plugins/jasny-bootstrap.min.js',
+            PATHS.src + '/public/third-party/material-kit/assets/js/plugins/jquery.flexisel.js',
+            PATHS.src + '/public/third-party/material-kit/assets/assets-for-demo/js/modernizr.js',
+            PATHS.src + '/public/third-party/material-kit/assets/js/material-kit.min.js',
+            PATHS.src + '/public/js/bundle/**/*.js',
+            PATHS.src + '/public/js/main.js'
+        ],
+        'public/js/vendors': Object.keys(package.dependencies)
+
     },
     output: {
         path: PATHS.dist,
@@ -33,19 +52,19 @@ module.exports = {
         publicPath: PATHS.publicPath
     },
     optimization: {
-        // runtimeChunk: 'single',
-        runtimeChunk: false,
-        splitChunks: false,
-        /*splitChunks: {
+        runtimeChunk: 'single',
+        // runtimeChunk: false,
+        // splitChunks: false,
+        splitChunks: {
             cacheGroups: {
                 vendors: {
                     test: /[\\/]node_modules[\\/]/,
-                    name: '/public/js/vendors',
+                    name: 'public/js/vendors',
                     enforce: true,
                     chunks: 'all'
                 }
             }
-        }*/
+        }
     },
     resolve: {
         extensions: ['.js', '.jsx', '.jsm'],
@@ -141,7 +160,7 @@ module.exports = {
         //     scripts: ['public/js/all.min.js', 'public/js/main.js']
         // }),
         // extractCSS,
-        new ExtractTextPlugin("css/main.css"),
+        new ExtractTextPlugin(path.join(PATHS.assetsPath, '/css/main.css')),
         new HtmlWebpackPlugin({
             template: '../node_modules/html-webpack-template/index.ejs',
             title: 'Nextel',
@@ -159,6 +178,7 @@ module.exports = {
             mobile: true,
             scripts: [PATHS.assetsPath + '/js/all.min.js', PATHS.assetsPath + '/js/main.js']
         }),
+
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin(),
         new CopyWebpackPlugin([{
@@ -169,14 +189,14 @@ module.exports = {
                 from: path.join(PATHS.src, PATHS.assetsPath, '/third-party'),
                 to: path.join(PATHS.dist, PATHS.assetsPath, '/third-party')
             },
-            {
-                from: path.join(PATHS.src, PATHS.assetsPath, '/js'),
-                to: path.join(PATHS.dist, PATHS.assetsPath, '/js')
-            },
-            {
-                from: path.join(PATHS.src, PATHS.assetsPath, '/css'),
-                to: path.join(PATHS.dist, PATHS.assetsPath, '/css')
-            }
+            // {
+            //     from: path.join(PATHS.src, PATHS.assetsPath, '/js'),
+            //     to: path.join(PATHS.dist, PATHS.assetsPath, '/js')
+            // },
+            // {
+            //     from: path.join(PATHS.src, PATHS.assetsPath, '/css'),
+            //     to: path.join(PATHS.dist, PATHS.assetsPath, '/css')
+            // }
         ]),
 
         // new StyleExtHtmlWebpackPlugin({
